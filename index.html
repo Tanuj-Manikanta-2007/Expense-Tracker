@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+    <title> Expense Tracker</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .expense-grid , .output {
+        display: grid;
+        grid-template-columns: 150px 150px 150px 100px;
+        column-gap: 10px;
+
+      }
+      .output {
+        column-gap: 10px;
+        margin-top: 10px;
+        row-gap: 5px;
+      }
+      input {
+        padding: 5px;
+        background-color:chartreuse;
+      }
+      ::placeholder {
+        color: black;
+      }
+      .delete-button {
+        background-color:orchid;
+        width: 100px;
+        padding: 3px ;
+        color: white;
+        border: rgba(177, 175, 175, 0.841) solid 1px;
+      }
+      .add-button {
+        background-color:chartreuse;
+      }
+      .heading {
+        width: 580px;
+        border: solid 1px black;
+        margin-bottom: 12px;
+        text-align: center;
+        background-color:rgb(245, 252, 107);
+      }
+      .bg-color {
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .sub {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 25px;
+      }
+      .expense-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+
+      .expense h3 {
+        margin: 0;
+        color: darkgreen;
+        font-size: 18px;
+      }
+
+      .clear-button {
+        background-color: darkred;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        font-size: 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .clear-button:hover {
+        background-color: crimson;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="bg-color">
+      <div class="sub">
+        <div class = "heading"><h1 > Expensence Trackor </h1></div>
+      <div class = "expense-grid">
+        <input placeholder="Name of the Item" class = "iname">
+        <input placeholder="Price of the Item" class = "iprice">
+        <input type ="number" placeholder="Number of items" class = "iquantity">
+        <button onclick = "Add()" class = "add-button"> Add </button>
+      </div>
+      <div class = "output"> </div>
+      <div class="expense-container">
+        <div class="expense"></div>
+        <button onclick="clearAll()" class="clear-button">Clear All</button>
+      </div> 
+       </div>
+      </div>
+    <script src="expenses.js"></script> 
+  </body>
+</html>
